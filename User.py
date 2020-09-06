@@ -1,10 +1,10 @@
 from Credentials import Credentials
 from getpass import getpass
+import pyperclip as pc
 
 
 class User:
     def __init__(self):
-
         self.username = ''
         self.password = ''
         self.token = None
