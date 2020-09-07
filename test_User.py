@@ -9,7 +9,6 @@ class TestUser(TestCase):
         self.assertEquals(self.u.new_user('john', 'keba'), {'username': 'john', 'password': 'keba'})
 
     def test_generate_password(self):
-        print(self.u.generate_password(20))
         self.assertEqual(len(self.u.generate_password()), 8)
         self.assertEqual(len(self.u.generate_password(20)), 20)
 
