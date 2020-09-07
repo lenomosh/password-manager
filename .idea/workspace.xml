@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="539cc106-cf11-4630-9234-59c45ad0ca97" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/User.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_User.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_User.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +36,22 @@
     <property name="nodejs.jest.jest_package" value="" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_User.TestUser.test_generate_password">
+  <component name="RunManager" selected="Python tests.Unittests for test_User.TestUser.test_get_account_details">
+    <configuration name="Unittests for test_User.TestUser.test_add_account" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="pycredentials" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_User.TestUser.test_add_account&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for test_User.TestUser.test_generate_password" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="pycredentials" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -47,6 +64,36 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_User.TestUser.test_generate_password&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_User.TestUser.test_get_account_details" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="pycredentials" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_User.TestUser.test_get_account_details&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_User.TestUser.test_user_new_user" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="pycredentials" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_User.TestUser.test_user_new_user&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -67,6 +114,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test_User.TestUser.test_get_account_details" />
+        <item itemvalue="Python tests.Unittests for test_User.TestUser.test_add_account" />
+        <item itemvalue="Python tests.Unittests for test_User.TestUser.test_user_new_user" />
         <item itemvalue="Python tests.Unittests for test_User.TestUser.test_generate_password" />
         <item itemvalue="Python tests.Unittests in test_User.py" />
       </list>
@@ -85,7 +135,7 @@
       <updated>1599417506604</updated>
       <workItem from="1599417518020" duration="9919000" />
       <workItem from="1599432805658" duration="5689000" />
-      <workItem from="1599465395494" duration="6402000" />
+      <workItem from="1599465395494" duration="8586000" />
     </task>
     <servers />
   </component>
@@ -97,30 +147,48 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="141" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1599459256429" />
-    <state width="1320" height="163" key="GridCell.Tab.0.bottom" timestamp="1599472029708">
+    <state x="100" y="127" width="1166" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1599473805762">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="163" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1599472029708" />
-    <state width="1320" height="163" key="GridCell.Tab.0.center" timestamp="1599472029708">
+    <state x="100" y="127" width="1166" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.27.1366.741@0.27.1366.741" timestamp="1599473805762" />
+    <state width="1320" height="163" key="GridCell.Tab.0.bottom" timestamp="1599474218077">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="163" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1599472029708" />
-    <state width="1320" height="163" key="GridCell.Tab.0.left" timestamp="1599472029707">
+    <state width="1320" height="163" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1599474218077" />
+    <state width="1320" height="163" key="GridCell.Tab.0.center" timestamp="1599474218076">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="163" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1599472029707" />
-    <state width="1320" height="163" key="GridCell.Tab.0.right" timestamp="1599472029708">
+    <state width="1320" height="163" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1599474218076" />
+    <state width="1320" height="163" key="GridCell.Tab.0.left" timestamp="1599474218076">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="163" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1599472029708" />
+    <state width="1320" height="163" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1599474218076" />
+    <state width="1320" height="163" key="GridCell.Tab.0.right" timestamp="1599474218077">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="163" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1599474218077" />
     <state x="172" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1599468475922">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="31" width="1022" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1599468475922" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_User.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/password_manager$Unittests_for_test_User_TestUser_test_generate_password.coverage" NAME="Unittests for test_User.TestUser.test_generate_password Coverage Results" MODIFIED="1599472029690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/password_manager$Unittests_for_test_User_TestUser_test_user_new_user.coverage" NAME="Unittests for test_User.TestUser.test_user_new_user Coverage Results" MODIFIED="1599472113301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pycredentials$Unnamed.coverage" NAME="PythonConfig Coverage Results" MODIFIED="1599420932207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/password_manager$Unittests_for_test_User_TestUser_test_get_account_details.coverage" NAME="Unittests for test_User.TestUser.test_get_account_details Coverage Results" MODIFIED="1599474218065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/password_manager$Unittests_for_test_User_TestUser_test_add_account.coverage" NAME="Unittests for test_User.TestUser.test_add_account Coverage Results" MODIFIED="1599472276129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/password_manager$Unittests_in_test_User_py.coverage" NAME="Unittests in test_User.py Coverage Results" MODIFIED="1599468761845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -40,13 +40,21 @@ class User(Credentials):
         :param account_name:
         :return:
         """
-        if (acc['account_name'] == account_name for acc in self.accounts):
-            acc = list((acc for acc in self.accounts if acc['account_name'] == account_name))
-            cb.copy(acc[0]['password'])
-            print(acc[0]['password'])
-            print("Password has been copied to clipboard.")
-            return acc[0]
-        return 'Account  not found'
+        if len(self.accounts) != 0:
+
+            if (acc['account_name'] == account_name for acc in self.accounts):
+                try:
+                    acc = list((acc for acc in self.accounts if acc['account_name'] == account_name))
+                    print(acc)
+                    cb.copy(acc[0]['password'])
+                    print(acc[0]['password'])
+                    print("Password has been copied to clipboard.")
+                    return acc[0]
+                except IndexError:
+                    return 'Account not found'
+            return 'Account  not found'
+        else:
+            return 'You have no account yet.'
 
     def login(self):
         username = input("Username: ")
