@@ -47,6 +47,12 @@ class Credentials:
         return account_details
 
     def delete_account(self, account_name):
+        """
+        Removes account with specified account_name from accounts if the user
+
+        :param account_name:
+        :return:
+        """
         if any(account['account_name'] == account_name for account in self.accounts):
             user_input = input(f'Do you want to delete your {account_name} account? (y/n): ').lower()
             if user_input == 'y':
