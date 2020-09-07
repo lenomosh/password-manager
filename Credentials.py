@@ -8,6 +8,11 @@ class Credentials:
         self.accounts = []
 
     def generate_password(self, password_length=None):
+        """
+        Generates an alphanumeric password whose length is specified in the argument
+        :param password_length:
+        :return: string whose length is `password_len`
+        """
         alphabets = ascii_letters + digits + punctuation
         if password_length is None:
             password_length = int(input('Specify the length of password you wish to generate (positive int): '))
