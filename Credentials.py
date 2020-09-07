@@ -10,7 +10,7 @@ class Credentials:
     def generate_password(self, password_length=None):
         alphabets = ascii_letters + digits + punctuation
         if password_length is None:
-            password_length = 8
+            password_length = int(input('Specify the length of password you wish to generate (positive int): '))
         else:
             password_length = int(password_length)
         while True:
@@ -32,7 +32,7 @@ class Credentials:
 
     def add_account(self, account_name, username, password=None):
         if password is None:
-            password = self.generate_password
+            password = self.generate_password()
         account_details = {'account_name': account_name, 'username': username, 'password': password}
         self.accounts.append(account_details)
         return account_details

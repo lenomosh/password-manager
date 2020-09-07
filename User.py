@@ -12,20 +12,21 @@ class User(Credentials):
         if not self.token:
             print('You need to either login or sign Up to continue')
             user_input = int(input("Reply with 1 to login and 2 to sign Up (1/2): "))
-            username = input("Username: ")
-            password = getpass()
             if user_input == 1:
-                self.login(username, password)
+                self.login()
             else:
-                self.new_user(username, password)
+                self.new_user()
 
-    def new_user(self, username, password):
+    def new_user(self, username=None, password=None):
         """
         Created a new user
         :param username:
         :param password:
         :return:
         """
+        if username is None and password is None:
+            username = input("Username: ")
+            password = getpass("Password: ")
         self.username = username
         self.password = password
         self.token = self.generate_token
@@ -47,7 +48,9 @@ class User(Credentials):
             return acc[0]
         return 'Account  not found'
 
-    def login(self, username, password):
+    def login(self):
+        username = input("Username: ")
+        password = getpass("Password: ")
         if username == self.username and password == self.password:
             self.token = self.generate_token
             return f"Welcome back {username}, you access token is {self.token}"
