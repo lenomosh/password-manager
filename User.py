@@ -35,7 +35,7 @@ class User(Credentials):
         self.username = username
         self.password = password
         self.token = self.generate_token
-        print(f"Welcome {username}, An account has been created for you, you can use the following token for " \
+        print(f"Welcome {username}, An account has been created for you, you can use the following token for "
               f"authentication. Your access token is {self.token} ")
         return {'username': username, 'password': password}
 
@@ -50,10 +50,8 @@ class User(Credentials):
             if (acc['account_name'] == account_name for acc in self.accounts):
                 try:
                     acc = list((acc for acc in self.accounts if acc['account_name'] == account_name))
-                    print(acc)
                     password = str(acc[0]['password'])
                     cb.copy(password)
-                    print(acc[0]['password'])
                     print("Password has been copied to clipboard.")
                     return acc[0]
                 except IndexError:

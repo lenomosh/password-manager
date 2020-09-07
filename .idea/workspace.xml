@@ -4,6 +4,9 @@
     <list default="true" id="539cc106-cf11-4630-9234-59c45ad0ca97" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/User.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solution.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +140,7 @@
       <updated>1599417506604</updated>
       <workItem from="1599417518020" duration="9919000" />
       <workItem from="1599432805658" duration="5689000" />
-      <workItem from="1599465395494" duration="11459000" />
+      <workItem from="1599465395494" duration="11948000" />
     </task>
     <servers />
   </component>
