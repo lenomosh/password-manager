@@ -1,6 +1,6 @@
 from Credentials import Credentials
 from getpass import getpass
-import clipboard as cb
+import pyperclip as cb
 
 
 class User(Credentials):
@@ -46,7 +46,8 @@ class User(Credentials):
                 try:
                     acc = list((acc for acc in self.accounts if acc['account_name'] == account_name))
                     print(acc)
-                    cb.copy(acc[0]['password'])
+                    password = str(acc[0]['password'])
+                    cb.copy(password)
                     print(acc[0]['password'])
                     print("Password has been copied to clipboard.")
                     return acc[0]
