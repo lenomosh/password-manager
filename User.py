@@ -4,6 +4,10 @@ import pyperclip as cb
 
 
 class User(Credentials):
+    """
+    The class is responsible for creating, user account, logging in, logging out
+    and managing accounts for different accounts
+    """
     def __init__(self):
         super().__init__()
         self.username = 'leno'
