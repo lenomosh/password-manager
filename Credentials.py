@@ -8,10 +8,12 @@ class Credentials:
         self.accounts = []
 
     @property
-    def generate_password(self):
+    def generate_password(self, password_length=None):
         alphabets = ascii_letters + digits + punctuation
+        if password_length is None:
+            password_length = 8
         while True:
-            password = ''.join(choice(alphabets) for i in range(8))
+            password = ''.join(choice(alphabets) for i in range(password_length))
             try:
                 accept = int(
                     input(f"Generated password is {password}.\n Reply with 1 to accept or 2 to generate another "
