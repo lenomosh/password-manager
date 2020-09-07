@@ -17,7 +17,8 @@ class TestUser(TestCase):
                              {'account_name': 'ig', 'username': 'if', 'password': 'qwertyuio'})
 
     def test_get_account_details(self):
-        self.assertEqual(self.u.get_account_details('retrytfyt'), 'You have no account yet.')
+        # Uncomment next Line if you want to run only this text block
+        # self.assertEqual(self.u.get_account_details('retrytfyt'), 'You have no account yet.')
         self.u.add_account('facebook', 'facebook_user', 'facebook_pass')
         self.assertDictEqual(self.u.get_account_details('facebook'),
                              {'account_name': 'facebook', 'username': 'facebook_user', 'password': 'facebook_pass'})
