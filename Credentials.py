@@ -33,6 +33,10 @@ class Credentials:
 
     @property
     def generate_token(self):
+        """
+        Create an access token for authentication of the user
+        :return: Hexadecimal srting that is url safe
+        """
         return token_hex(16)
 
     def add_account(self, account_name, username, password=None):
