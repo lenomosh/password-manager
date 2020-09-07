@@ -77,6 +77,10 @@ class User(Credentials):
             return "Incorrect Username or password. Please try again"
 
     def logout(self):
+        """
+        Logout out the user and clears access token
+        :return:
+        """
         self.token = None
         return f"Logout was successful. See you soon {self.username}"
 

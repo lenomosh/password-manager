@@ -21,11 +21,15 @@
   </component>
   <component name="JupyterTrust" id="87301ae0-8857-4a8a-925e-0806f5460148" />
   <component name="ProjectId" id="1h9Jj5WhDZ42sDqZBW6uYmj3OqD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -132,12 +136,15 @@
       <updated>1599417506604</updated>
       <workItem from="1599417518020" duration="9919000" />
       <workItem from="1599432805658" duration="5689000" />
-      <workItem from="1599465395494" duration="9967000" />
+      <workItem from="1599465395494" duration="10015000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="141" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599459256429">
