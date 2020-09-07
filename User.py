@@ -62,6 +62,12 @@ class User(Credentials):
             return 'You have no account yet.'
 
     def login(self):
+        """
+        Prompt user for username and password.
+        It then authenticates the user and generates an access_token
+
+        :return: string
+        """
         username = input("Username: ")
         password = getpass("Password: ")
         if username == self.username and password == self.password:
