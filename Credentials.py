@@ -7,11 +7,12 @@ class Credentials:
     def __init__(self):
         self.accounts = []
 
-    @property
     def generate_password(self, password_length=None):
         alphabets = ascii_letters + digits + punctuation
         if password_length is None:
             password_length = 8
+        else:
+            password_length = int(password_length)
         while True:
             password = ''.join(choice(alphabets) for i in range(password_length))
             try:
