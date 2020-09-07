@@ -8,6 +8,7 @@ class User(Credentials):
     The class is responsible for creating, user account, logging in, logging out
     and managing accounts for different accounts
     """
+
     def __init__(self):
         super().__init__()
         self.username = 'leno'
@@ -34,9 +35,9 @@ class User(Credentials):
         self.username = username
         self.password = password
         self.token = self.generate_token
-        print( f"Welcome {username}, An account has been created for you, you can use the following token for " \
-               f"authentication. Your access token is {self.token} ")
-        return {'username':username,'password':password}
+        print(f"Welcome {username}, An account has been created for you, you can use the following token for " \
+              f"authentication. Your access token is {self.token} ")
+        return {'username': username, 'password': password}
 
     def get_account_details(self, account_name):
         """
@@ -85,6 +86,12 @@ class User(Credentials):
         return f"Logout was successful. See you soon {self.username}"
 
     def view_all_accounts(self):
+        """
+        Return a dictionary of all accounts that belongs to the user
+
+        :return: self.accounts
+        """
         print(f"You have {len(self.accounts)} accounts with us.")
         for ac in self.accounts:
             print(ac)
+        return self.accounts
