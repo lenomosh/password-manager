@@ -3,8 +3,9 @@ from threading import Thread
 from getpass import getpass
 from pyfiglet import Figlet
 from terminaltables import AsciiTable
+import sys
 
-f = Figlet(font='banner3')
+f = Figlet(font='mini')
 
 
 class RunApp:
@@ -16,23 +17,16 @@ class RunApp:
     def sign_up(self):
         print(f.renderText("SignUp"))
         if not self.user.token:
-            print('You need to either login or sign Up to continue')
-            user_input = int(input("Reply with 1 to login and 2 to sign Up (1/2): "))
-            username = input('Username: ')
+            username = input('Enter Username: ')
+            print("1. Generate a password")
+            print("2. Enter your own password")
+            user_input = int(input("Your Response (1/2): "))
             if user_input == 1:
-                password = getpass('Password: ')
-                response = self.user.login(username, password)
-                print(response)
+                password = self.user.generate_password()
             else:
-                print("1. Generate a password")
-                print("2. Enter your own password")
-                user_input = int(input("Your Response (1/2): "))
-                if user_input == 1:
-                    password = self.user.generate_password()
-                else:
-                    password = input('Enter new password: ')
+                password = getpass('Enter new password: ')
 
-                self.user.new_user(username, password)
+            self.user.new_user(username, password)
 
     def create_credentials_account(self):
         print(f.renderText("Create new credential account"))
@@ -44,20 +38,23 @@ class RunApp:
         if user_input == 1:
             password = self.user.generate_password()
         else:
-            password = input('Enter new password: ')
+            password = getpass('Enter new password: ')
         if self.user.add_account(account, username, password):
             print("Account Created Successfully")
 
     def login(self):
+        print(f.renderText("Login"))
         username = input("Username: ")
         password = getpass("password: ")
         print(self.user.login(username, password))
 
     def delete_credentials_account(self):
+        print(f.renderText("Delete Account"))
         account_name = input("Account Name: ")
         self.user.delete_account(account_name)
 
     def view_credential_account(self):
+        print(f.renderText("View Account Details"))
         account_name = input('Account Name: ')
         account = self.user.get_account_details(account_name)
         datatable = [
@@ -70,6 +67,7 @@ class RunApp:
         print(table.table)
 
     def view_all_accounts(self):
+        print(f.renderText("All Accounts"))
         accounts = self.user.view_all_accounts()
         datatable = [
             ["Account Name", "Account Username", "Account Password"]
@@ -82,7 +80,9 @@ class RunApp:
         print(table.table)
 
     def dashboard(self):
+
         while True:
+            print(f.renderText("Dashboard"))
             if self.user.token:
                 print("1. Add Account\n"
                       "2. View Specific Account\n"
@@ -102,6 +102,7 @@ class RunApp:
                 elif user_input == '5':
                     self.user.logout()
                     pass
+                pass
             else:
                 print("1. Login\n"
                       "2. Quit")
@@ -109,15 +110,12 @@ class RunApp:
                 if response == '1':
                     self.login()
                 elif response == '2':
-                    print("Goodbye, see you soon")
-                    pass
-                pass
-            pass
+                    print(f.renderText("Goodbye, see you soon"))
+                    sys.exit(0)
 
     def run(self):
         if __name__ == '__main__':
             Thread(target=self.sign_up()).start()
-            Thread(target=self.create_credentials_account()).start()
             if self.user.token:
                 Thread(target=self.dashboard()).start()
 

@@ -1,5 +1,4 @@
 from Credentials import Credentials
-from getpass import getpass
 import pyperclip as cb
 
 
