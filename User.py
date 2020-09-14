@@ -11,32 +11,22 @@ class User(Credentials):
 
     def __init__(self):
         super().__init__()
-        self.username = 'leno'
-        self.password = 'leno'
-        self.token = 'jkakj'
-        if not self.token:
-            print('You need to either login or sign Up to continue')
-            user_input = int(input("Reply with 1 to login and 2 to sign Up (1/2): "))
-            if user_input == 1:
-                self.login()
-            else:
-                self.new_user()
+        self.username = None
+        self.password = None
+        self.token = None
 
-    def new_user(self, username=None, password=None):
+    def new_user(self, username, password):
         """
         Created a new user
         :param username:
         :param password:
         :return:
         """
-        if username is None and password is None:
-            username = input("Username: ")
-            password = getpass("Password: ")
         self.username = username
         self.password = password
         self.token = self.generate_token
         print(f"Welcome {username}, An account has been created for you, you can use the following token for "
-              f"authentication. Your access token is {self.token} ")
+              f"authentication.\n Your access token is {self.token} ")
         return {'username': username, 'password': password}
 
     def get_account_details(self, account_name):
@@ -55,20 +45,18 @@ class User(Credentials):
                     print("Password has been copied to clipboard.")
                     return acc[0]
                 except IndexError:
+                    print('Account not found')
                     return 'Account not found'
-            return 'Account  not found'
         else:
-            return 'You have no account yet.'
+            print('You have no account yet.')
 
-    def login(self):
+    def login(self,username,password):
         """
         Prompt user for username and password.
         It then authenticates the user and generates an access_token
 
         :return: string
         """
-        username = input("Username: ")
-        password = getpass("Password: ")
         if username == self.username and password == self.password:
             self.token = self.generate_token
             return f"Welcome back {username}, you access token is {self.token}"
@@ -81,7 +69,7 @@ class User(Credentials):
         :return:
         """
         self.token = None
-        return f"Logout was successful. See you soon {self.username}"
+        print(f"Logout was successful. See you soon {self.username}")
 
     def view_all_accounts(self):
         """
@@ -90,6 +78,6 @@ class User(Credentials):
         :return: self.accounts
         """
         print(f"You have {len(self.accounts)} accounts with us.")
-        for ac in self.accounts:
-            print(ac)
+        # for ac in self.accounts:
+        #     print(ac)
         return self.accounts
