@@ -5,13 +5,14 @@
 
 ## Technologies used
 * Python3.8
-* Jupyter Notebook
+* Terminal Tables
+* Pyfiglet
 * Pyperclip
 
 ## Setup Instructions
-- run `pip install pyperclip`
-- Install jupyter notebook via conda `conda install notebook` or pip `pip install notebook`
-- Run `Test.ipynb`
+- Clone the repo
+- run `pip install pyperclip pyfiglet terminaltables`
+- inside the project folder, run `python3 run.py`
 
 ## Developed by
 [Lennox Omondi](https://linkedin.com/in/lenomosh)
